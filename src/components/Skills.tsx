@@ -2,7 +2,7 @@ import { JSX } from "react";
 import { AnimatePresence } from "framer-motion";
 import FadeRight from "@/animation/FadeRight";
 import {
-  BACKEND_PILL,
+  MACHINE_LEARNING_FRAMEWORKS,
   DATABASE_ORM_PILL,
   LANGUAGES,
   LIBRARY_FRAMEWORK,
@@ -55,7 +55,7 @@ export default function Skills() {
         <AnimatePresence>
           <div className="mt-4">
             <span className="text-xs font-semibold sm:text-sm">
-              Libraries and frameworks
+              Web Dev frameworks & libraries 
             </span>
             <div className="mt-2 flex flex-wrap gap-4 text-xl dark:text-zinc-100">
               {LIBRARY_FRAMEWORK.map((pill, index) => (
@@ -72,13 +72,16 @@ export default function Skills() {
             </div>
           </div>
         </AnimatePresence>
+
         <AnimatePresence>
           <div className="mt-4">
-            <span className="text-xs font-semibold sm:text-sm">Backend</span>
-            <div className="mt-2 flex flex-wrap gap-3">
-              {BACKEND_PILL.map((pill, index) => (
+            <span className="text-xs font-semibold sm:text-sm">
+              Machine Learning frameworks 
+            </span>
+            <div className="mt-2 flex flex-wrap gap-4 text-xl dark:text-zinc-100">
+              {MACHINE_LEARNING_FRAMEWORKS.map((pill, index) => (
                 <FadeRight
-                  key={`backend-${index}`}
+                  key={`lib-frame-${index}`}
                   duration={0.4}
                   delay={0.1 + index * 0.1}
                   whileInView={!isMobileDebonced}
@@ -90,6 +93,7 @@ export default function Skills() {
             </div>
           </div>
         </AnimatePresence>
+
         <AnimatePresence>
           <div className="mt-4">
             <span className="text-xs font-semibold sm:text-sm">

@@ -28,7 +28,19 @@ export const EDUCATION: TShowCaseListDetatils[] = [
       "Currently pursuing a Bachelor of Science in Computer Science at the University of the People, an accredited online university that offers accessible, affordable, and quality higher education to students worldwide. The program covers a wide range of topics, including programming, data structures, algorithms, software engineering, and more, providing a comprehensive foundation in computer science principles and practices.",
   },
   {
-    title: "Agrcultural Engineering",
+    title: "Nano Degree in Data Analysis and Visualization",
+    organisation: {
+      name: "Udacity",
+      href: "https://www.udacity.com/",
+    },
+    date: "Sep 2023 - Jan 2024",
+    location: "Online",
+    description:
+      "Completed a Nano Degree in Data Analysis and Visualization using Power BI from Udacity, a leading online learning platform that offers a wide range of courses in technology, data science, and other fields.\
+      The program provided a comprehensive overview of data analysis and visualization techniques, tools, and best practices, equipping students with the skills needed to analyze and visualize data effectively.",
+  },
+  {
+    title: "Agricultural Engineering",
     organisation: {
       name: "Al Baath University",
       href: "https://www.albaath-univ.edu.sy/",

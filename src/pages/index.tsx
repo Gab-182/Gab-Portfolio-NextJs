@@ -43,7 +43,7 @@ export default function Home() {
           {
             property: "keywords",
             content:
-              "Fullstack web Developer, Frontend Developer, Web Developer, React.js, Frontend Development, Web Development, Machine Learning, AI, Software Developer, Software Engineer, Portfolio, Ghaiath Abdoush, Ghaiath, Abdoush, Ghaiath Abdoush Portfolio, Ghaiath Abdoush Website, Ghaiath Abdoush Developer, Ghaiath Abdoush Software Developer, Ghaiath Abdoush Web Developer, Ghaiath Abdoush Fullstack Developer, Ghaiath Abdoush Fullstack Web Developer, Ghaiath Abdoush Fullstack Software Developer, Ghaiath Abdoush Fullstack Web Developer Portfolio, Ghaiath Abdoush Fullstack Software Developer Portfolio, Ghaiath Abdoush Fullstack Developer Portfolio, Ghaiath Abdoush Fullstack Web Developer Website, Ghaiath Abdoush Fullstack Software Developer Website, Ghaiath Abdoush Fullstack Developer Website, Ghaiath Abdoush Fullstack Web Developer Developer, Ghaiath Abdoush Fullstack Software Developer Developer, Ghaiath Abdoush Fullstack Developer Developer",
+              "Fullstack web Developer, Portfolio,Fullstack web Developer, Frontend Developer, Web Developer, React.js, Frontend Development, Web Development, Machine Learning, AI, Software Developer, Software Engineer, Portfolio, Ghaiath Abdoush, Ghaiath, Abdoush, Ghaiath Abdoush Portfolio, Ghaiath Abdoush Website, Ghaiath Abdoush Developer, Ghaiath Abdoush Software Developer",
           },
         ]}
       />

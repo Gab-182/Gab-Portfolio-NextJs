@@ -36,8 +36,8 @@ export default function Navbar(props: TNavbar) {
   };
 
   return (
-    <header className="top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
-      <div className="mx-auto flex h-32 items-center justify-between lg:max-w-7xl ">
+    <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
+      <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
         <Link
           href="/"
           className="flex items-center justify-center drop-shadow-teralight"
@@ -48,7 +48,7 @@ export default function Navbar(props: TNavbar) {
           </div>
         </Link>
         <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-teal-600/50 md:flex">
-          <ul className="font- flex gap-2 text-sm">
+          <ul className="flex gap-2 text-sm font-medium">
             {props.routes.map((_link, index) => {
               return (
                 <li
@@ -123,7 +123,7 @@ export default function Navbar(props: TNavbar) {
                   ))}
                   <ThemeSwitch setClose={setIsModalOpen} />
                 </div>
-                <div className="absolute bottom-0 py-6">©2023 Amit Chauhan</div>
+                <div className="absolute bottom-0 py-6">©2023 GAB </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>

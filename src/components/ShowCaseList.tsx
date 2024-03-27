@@ -67,13 +67,15 @@ export function ShowCaseListDetatils(props: TShowCaseListDetatils) {
       >
         <h3 className="text-base font-bold sm:text-xl md:text-2xl">
           {props.title}{" "}
-          <Link
-            href={props.organisation.href}
-            className="cursor-pointer text-teal-600 dark:text-teal-400"
-            target="_blank"
-          >
-            @{props.organisation.name}
-          </Link>
+          {props.organisation.href && (
+            <Link
+              href={props.organisation.href}
+              className="cursor-pointer text-teal-600 dark:text-teal-400"
+              target="_blank"
+            >
+              @{props.organisation.name}
+            </Link>
+          )}
         </h3>
         <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400 xs:text-base">
           {props.date} | {props.location}
