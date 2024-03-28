@@ -1,5 +1,5 @@
 import { ContactForm } from "@/components/ContactForm";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/Icons";
+import { GithubIcon, LinkedinIcon, TwitterIcon, DiscordIcon } from "@/components/Icons";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Footer() {
@@ -48,6 +48,14 @@ export default function Footer() {
             aria-label="link to Linkedin"
           >
             <LinkedinIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
+          </a>
+          <a
+            href={siteMetadata.discord}
+            target="_blank"
+            className="h-6 w-6"
+            aria-label="link to Discord"
+          >
+            <DiscordIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
           </a>
         </div>
       </div>

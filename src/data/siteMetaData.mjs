@@ -16,6 +16,7 @@ export const siteMetadata = {
   github: "https://github.com/Gab-182",
   twitter: "https://twitter.com/Ghaiath_Abdoush",
   linkedin: "https://www.linkedin.com/in/Ghaiath-Abdoush",
+  discord: "https://discord.com/users/:gab_182",
   locale: "en-US",
   googleSiteVerification: "Sv7bO3Rn0W9QrMGKplpbeyL_dKh3XHvUY_zmcfjr1Sk",
 };
