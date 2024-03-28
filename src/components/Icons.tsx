@@ -65,27 +65,6 @@ export const ArrowTopRight = (props: IconType) => (
   </svg>
 );
 
-export function NextJsIcon() {
-  return (
-    <svg
-      stroke="currentColor"
-      fill="none"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      height="100%"
-      width="100%"
-      xmlns="http://www.w3.org/2000/svg"
-      className="text-zinc-900 dark:text-zinc-100"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993"></path>
-      <path d="M15 12v-3"></path>
-    </svg>
-  );
-}
-
 
 export function MailIcon({ className }: { className?: string }) {
   return (
