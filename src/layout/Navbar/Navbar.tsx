@@ -23,6 +23,7 @@ type TNavbar = {
 export default function Navbar(props: TNavbar) {
   const pathName = usePathname();
   const router = useRouter();
+  const pdfURL = "/Ghaiath_Abdoush_CV.pdf";
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
