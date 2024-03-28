@@ -101,63 +101,65 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/CKD_4.png",
     ],
     description:
-    "Early CKD Prediction is a web application that predicts the Chronic Kidney Disease (CKD) using Machine Learning. \
+      "Early CKD Prediction is a web application that predicts the Chronic Kidney Disease (CKD) using Machine Learning. \
     The application is built using Flask, Scikit-learn, Pandas, Numpy, Matplotlib, Seaborn, XGBoost, and other libraries. \
     The application uses Decision Tree, Random Forest, Logistic Regression, and other Machine Learning algorithms to predict the CKD. \
     The application also uses Feature Engineering, Hyperparameter Tuning, Cross Validation, Model Evaluation, Data Cleaning, and Data Analysis to improve the prediction.",
     sourceCodeHref: "https://github.com/Gab-182/CKD_PREDICT",
   },
   {
-    name: "Many Games",
-    favicon: "/images/projects/logos/manygames.ico",
+    name: "SpinMasters",
+    favicon: "/images/projects/logos/spinmasters.ico",
     imageUrl: [
-      "/images/projects/manyGamesDark.webp",
-      "/images/projects/manyGamesLight.webp",
-      "/images/projects/manyGames2048.webp",
-      "/images/projects/manyGamesPuzzle.webp",
-      "/images/projects/manyGamesWordle.webp",
+      "/images/projects/SpineMaster_1.png",
+      "/images/projects/SpineMaster_2.png",
     ],
     description:
-      "Many short and fun games using Reactjs, Typescript and Tailwindcss with collaboration with other developers",
-    sourceCodeHref: "https://github.com/BUMBAIYA/ManyGames",
-    liveWebsiteHref: "https://manygames.vercel.app",
+      "SpinMasters is a web application that allows users to play the modern pong game, \
+      the application is built using Nextjs, Tailwindcss, Nestjs, Prisma, Postgres, Phaser, Socket.io, and other libraries. \
+      It contains a game room where users can play the game, and a chat rooms where users can chat with each other. \
+      The application uses Google Auth to authenticate users,\
+      and Docker to deploy the application.",
+    sourceCodeHref: "https://github.com/nousheenali/ft_transcendence",
   },
   {
-    name: "My portfolio",
+    name: "Gab portfolio",
     favicon: "/favicon.ico",
     imageUrl: [
-      "/images/projects/portfolioDark.webp",
-      "/images/projects/portfolioLight.webp",
+      "/images/projects/Home_Page_Light.png",
+      "/images/projects/Home_Page_dark.png",
     ],
     description:
-      "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",
-    sourceCodeHref: "https://github.com/BUMBAIYA/amitchauhan-v2",
+      "This is my portfolio website, It is made using Nextjs, Tailwindcss, and Typescript. \
+      It contains information about me, my projects, and my skills. \
+      The website is responsive and has a dark mode.",
+    sourceCodeHref: "https://github.com/Gab-182/Gab-Portfolio-NextJs",
     liveWebsiteHref: siteMetadata.siteUrl,
   },
   {
-    name: "Covid Tracker",
-    favicon: "/images/projects/logos/covidtracker.ico",
-    imageUrl: [
-      "/images/projects/covidTracker.webp",
-      "/images/projects/covidTrackerMap.webp",
-      "/images/projects/covidTrackerTable.webp",
-    ],
+    name: "IRC server",
+    favicon: "/images/projects/logos/irc.ico",
+    imageUrl: ["/images/projects/IRC_1.png"],
     description:
-      "Get latest covid related stats in a table where user can filter using country and cases. It also has a map which show every countries data for quick view. It uses an open source api (disease.sh). Made using Reactjs, Javascript and MUI",
-    sourceCodeHref: "https://github.com/BUMBAIYA/CovidTracker",
-    liveWebsiteHref: "https://bumbaiya.github.io/CovidTracker",
+      "IRC server is a chat server that allows users to chat with each other. \
+      The server is built using C++, and it uses the IRC protocol to communicate with the clients. \
+      The server supports multiple channels, and users can join, leave, and create channels. \
+      The server also supports private messages, and users can send messages to each other privately.",
+    sourceCodeHref: "https://github.com/Gab-182/ft_irc",
   },
   {
-    name: "Stock predictor",
+    name: "Market Analysis for National Clothing Chain",
     favicon: "/images/projects/logos/stockpredictor.ico",
     imageUrl: [
-      "/images/projects/stockPredictor.webp",
-      "/images/projects/stockPredictorCandleChart.webp",
-      "/images/projects/stockPredictorCompareChart.webp",
-      "/images/projects/stockPredictorLineChart.webp",
+      "/images/projects/MAC_1.png",
+      "/images/projects/MAC_2.png",
+      "/images/projects/MAC_3.png",
     ],
     description:
-      "Get prediction of opening and closing price of stocks price. Frontend is made using Reactjs and backend is made using Flask and Machine learning model are trained using Tensorflow",
-    sourceCodeHref: "https://github.com/Rohrschachh/Stock-Market-Predictor",
+      "Market Analysis for National Clothing Chain is a project that analyzes the market trends for a national clothing chain. \
+      The project is built Power BI, and it uses data from the national clothing chain to analyze the market trends, and predict the future trends. \
+      The project contains a dashboard that shows the market trends, and a report that explains the analysis.",
+    sourceCodeHref:
+      "https://github.com/Gab-182/Market-Analysis-Report-for-National-Clothing-Chain",
   },
 ];
