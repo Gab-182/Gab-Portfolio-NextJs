@@ -12,6 +12,7 @@ const nextConfig = withBundleAnalyzer({
   },
   images: {
     domains: ["https://flagcdn.com"],
+    
   },
   webpack: (config) => {
     config.resolve.fallback = {

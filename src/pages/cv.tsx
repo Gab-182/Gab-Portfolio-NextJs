@@ -1,23 +1,29 @@
 import { NextSeo } from "next-seo";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import FadeUp from "@/animation/FadeUp";
+import { AnimatePresence } from "framer-motion";
+import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 
-// Render the cv in the browser
 export default function RenderCv() {
   return (
     <>
+      <CursorTrailCanvas
+        color="hsla(183, 64%, 27%, 0.4)"
+        className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+      />
       <NextSeo
-        title="About Ghaiath Abdoush | Software & Web Developer"
-        description="Learn more about Ghaiath Abdoush, a Software and Web Developer with a passion for AI, Machine Learning, and Full-Stack Development."
-        canonical={`${siteMetadata.siteUrl}/about`}
+        title="Ghaiath Abdoush | Software & Web Developer - CV"
+        description="View the comprehensive curriculum vitae (CV) of Ghaiath Abdoush, a talented software and web developer with expertise in AI, Machine Learning, and Full-Stack Development."
+        canonical={`${siteMetadata.siteUrl}/cv`}
         openGraph={{
-          url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Ghaiath Abdoush - Software & Web Developer",
+          url: `${siteMetadata.siteUrl}/cv`,
+          title: "Ghaiath Abdoush - Software & Web Developer - CV",
           description:
-            "Dive into the story of Ghaiath Abdoush, a Software and Web Developer with a passion for AI, Machine Learning, and Full-Stack Development.",
+            "Explore the detailed curriculum vitae (CV) of Ghaiath Abdoush, showcasing his skills, experience, and achievements in the fields of software development, AI, Machine Learning, and Full-Stack Development.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Ghaiath Abdoush - Portfolio Image",
+              alt: "Ghaiath Abdoush - CV Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -30,12 +36,30 @@ export default function RenderCv() {
           {
             property: "keywords",
             content:
-              "Fullstack web Developer, Frontend Developer, Web Developer, React.js, Frontend Development, Web Development, Machine Learning, AI, Software Developer, Software Engineer, Portfolio, Ghaiath Abdoush, Ghaiath, Abdoush, Ghaiath Abdoush Portfolio, Ghaiath Abdoush Website, Ghaiath Abdoush Developer, Ghaiath Abdoush Software Developer, Ghaiath Abdoush Web Developer, Ghaiath Abdoush Fullstack Developer, Ghaiath Abdoush Fullstack Web Developer, Ghaiath Abdoush Fullstack Software Developer, Ghaiath Abdoush Fullstack Web Developer Portfolio, Ghaiath Abdoush Fullstack Software Developer Portfolio, Ghaiath Abdoush Fullstack Developer Portfolio, Ghaiath Abdoush Fullstack Web Developer Website, Ghaiath Abdoush Fullstack Software Developer Website, Ghaiath Abdoush Fullstack Developer Website, Ghaiath Abdoush Fullstack Web Developer Developer, Ghaiath Abdoush Fullstack Software Developer Developer, Ghaiath Abdoush Fullstack Developer Developer",
+              "Ghaiath Abdoush CV, Software Developer CV, Web Developer CV, Fullstack Developer CV, AI Developer CV, Machine Learning Developer CV, Full-Stack Development CV, Curriculum Vitae, Resume, Portfolio, Ghaiath Abdoush Software Developer, Ghaiath Abdoush Web Developer, Ghaiath Abdoush Fullstack Developer, Ghaiath Abdoush AI Developer, Ghaiath Abdoush Machine Learning Developer",
           },
         ]}
-      /> 
-      <div className="mx-auto mt-0 flex h-screen max-w-7xl flex-col items-center gap-6 rounded-xl border-2 border-gray-200 bg-white px-6 pt-20 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg sm:px-14 md:mt-20 md:px-20 lg:mt-0 lg:flex-row lg:text-left">
-        <iframe src="/Ghaiath_Abdoush_CV.pdf" width="100%" height="100%" />
+      />
+      <div className="mx-auto max-w-5xl px-6 pt-20 text-center sm:px-14 md:mt-20 md:px-20">
+        <AnimatePresence>
+          <FadeUp key="title-greeting" duration={0.6}>
+            <h1 className="bg-gradient-to-r from-teal-500 to-tera-500 bg-clip-text text-5xl font-bold text-transparent dark:from-teal-200 dark:to-teal-500 sm:text-6xl md:text-7xl">
+              My Curriculum Vitae
+            </h1>
+          </FadeUp>
+        </AnimatePresence>
+        <div className="mx-auto mt-10 rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
+          <AnimatePresence>
+            <FadeUp key="cv-iframe" duration={0.6}>
+              <iframe
+                src="/Ghaiath_Abdoush_CV.pdf"
+                width="100%"
+                height="800px"
+                className="rounded-lg"
+              />
+            </FadeUp>
+          </AnimatePresence>
+        </div>
       </div>
     </>
   );
