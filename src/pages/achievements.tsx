@@ -9,7 +9,7 @@ export default function Achievements() {
   return (
     <>
       <CursorTrailCanvas
-        color="hsla(183, 64%, 27%, 0.4)"
+        color="hsla(183, 64%, 27%, 0.2)"
         className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
       />
       <NextSeo
@@ -51,8 +51,8 @@ export default function Achievements() {
           </FadeUp>
         </AnimatePresence>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
-          <div>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="flex flex-col gap-6 lg:col-span-1 col-span-2">
             <AnimatePresence>
               <FadeUp key="newspaper-mentions" duration={0.6} delay={0.2}>
                 <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
@@ -77,7 +77,7 @@ export default function Achievements() {
                           UAE News 24/7
                         </span>
                       </a>
-                      <p className="mt-1 text-sm">
+                      <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi continues to empower its students to propel
                         the future of technology in the Emirate by developing
                         cutting-edge projects...
@@ -100,7 +100,7 @@ export default function Achievements() {
                           Bizness Transform
                         </span>
                       </a>
-                      <p className="mt-1 text-sm">
+                      <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi and Al Hathboor Bikal AI host a hackathon
                         on computer vision using Python frameworks...
                       </p>
@@ -123,7 +123,7 @@ export default function Achievements() {
                           The Print Newspaper
                         </span>
                       </a>
-                      <p className="mt-1 text-sm">
+                      <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi Coding School continues to cement its
                         position as a leading talent incubator for developing
                         and upskilling the Emirate's youth in the coding
@@ -147,13 +147,23 @@ export default function Achievements() {
                           Bahrain This Week
                         </span>
                       </a>
-                      <p className="mt-1 text-sm">
+                      <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi's students developed a project featuring an
                         AI machine-learning model that predicts the occurrence
                         of chronic kidney diseases...
                       </p>
                     </li>
                   </ul>
+
+                  <div className="mt-6">
+                    <Image
+                      src="/images/News/latestNews.svg"
+                      alt="Newspaper Mentions"
+                      width={300}
+                      height={300}
+                      className="mx-auto"
+                    />
+                  </div>
                 </div>
               </FadeUp>
             </AnimatePresence>
@@ -219,7 +229,7 @@ export default function Achievements() {
                         className="rounded-lg"
                       />
                     </a>
-                    <p className="mt-2">
+                    <p className="mt-2 text-start">
                       Survivor Stories in Healthcare & HealAThon Winner
                       Announcement...
                     </p>
@@ -234,12 +244,11 @@ export default function Achievements() {
                   </div>
                 </FadeUp>
               </AnimatePresence>
-
               <AnimatePresence>
                 <FadeUp key="innovation-project" duration={0.6} delay={0.8}>
                   <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
                     <h2 className="text-2xl font-bold text-teal-600 dark:text-teal-400">
-                      Innovative Student Projects
+                      Meet the Visionaries Behind 'Sawt AlRu'ya
                     </h2>
                     <a
                       href="https://www.biznesstransform.com/42-abu-dhabi-al-hathboor-bikal-ai-host-hackathon-on-computer-vision-using-python-frameworks/"
@@ -250,12 +259,12 @@ export default function Achievements() {
                       <Image
                         src="/images/News/computerVisionHackathonWinner.jpg"
                         alt="Innovative Students"
-                        width={600}
+                        width={700}
                         height={400}
                         className="rounded-lg"
                       />
                     </a>
-                    <p className="mt-2">
+                    <p className="mt-2 text-start">
                       The winning team developed 'Sawt AlRu'ya,' an app
                       utilizing advanced computer vision and AI. It transforms
                       live video into real-time text descriptions and translates

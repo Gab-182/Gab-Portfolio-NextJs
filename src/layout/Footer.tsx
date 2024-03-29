@@ -1,6 +1,12 @@
 import { ContactForm } from "@/components/ContactForm";
-import { GithubIcon, LinkedinIcon, TwitterIcon, DiscordIcon } from "@/components/Icons";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  DiscordIcon,
+} from "@/components/Icons";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,52 +17,52 @@ export default function Footer() {
             Get in touch
           </span>
         </div>
-        <a
+        <Link
           href={`mailto:${siteMetadata.email}`}
           target="_blank"
           className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-7xl"
         >
-          <span>Ghaiath.Abdoush@</span>
+          <span>Ghaiath.Abdoush</span>
           <br />
-          <span>gmail.com</span>
-        </a>
+          <span>@gmail.com</span>
+        </Link>
         <ContactForm />
       </div>
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center  md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
         <span>©2024 Ghaiath Abdoush</span>
         <div className="flex gap-8">
-          <a
+          <Link
             href={siteMetadata.github}
             target="_blank"
             className="h-6 w-6"
             aria-label="link to Github"
           >
             <GithubIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
-          </a>
-          <a
+          </Link>
+          <Link
             href={siteMetadata.twitter}
             target="_blank"
             className="h-6 w-6"
             aria-label="link to Twitter"
           >
             <TwitterIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
-          </a>
-          <a
+          </Link>
+          <Link
             href={siteMetadata.linkedin}
             target="_blank"
             className="h-6 w-6"
             aria-label="link to Linkedin"
           >
             <LinkedinIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
-          </a>
-          <a
+          </Link>
+          <Link
             href={siteMetadata.discord}
             target="_blank"
             className="h-6 w-6"
             aria-label="link to Discord"
           >
             <DiscordIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
