@@ -14,10 +14,12 @@ const Project = dynamic(() => import("@/components/ProjectShowcase"), {
 export default function Home() {
   return (
     <>
-      <CursorTrailCanvas
-        color="hsla(183, 64%, 27%, 0.4)"
-        className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
-      />
+      <div className="hidden md:block">
+        <CursorTrailCanvas
+          color="hsla(183, 64%, 27%, 0.2)"
+          className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+        />
+      </div>
       <NextSeo
         title="Ghaiath Abdoush | Software & Web Developer"
         description="Explore the professional portfolio of Ghaiath Abdoush, a Software and Web Developer with a passion for AI, Machine Learning, and Full-Stack Development."

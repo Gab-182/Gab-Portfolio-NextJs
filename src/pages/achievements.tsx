@@ -6,12 +6,15 @@ import { siteMetadata } from "@/data/siteMetaData.mjs";
 import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 
 export default function Achievements() {
+  console.log(siteMetadata.theme);
   return (
     <>
-      <CursorTrailCanvas
-        color="hsla(183, 64%, 27%, 0.2)"
-        className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
-      />
+      <div className="hidden md:block">
+        <CursorTrailCanvas
+          color="hsla(183, 64%, 27%, 0.2)"
+          className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+        />
+      </div>
       <NextSeo
         title="Achievements | Ghaiath Abdoush"
         description="Explore the remarkable achievements of Ghaiath Abdoush, a talented software and web developer, who is making waves in the industry."
@@ -52,7 +55,7 @@ export default function Achievements() {
         </AnimatePresence>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          <div className="flex flex-col gap-6 lg:col-span-1 col-span-2">
+          <div className="col-span-2 flex flex-col gap-6 lg:col-span-1">
             <AnimatePresence>
               <FadeUp key="newspaper-mentions" duration={0.6} delay={0.2}>
                 <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
@@ -157,7 +160,7 @@ export default function Achievements() {
 
                   <div className="mt-6">
                     <Image
-                      src="/images/News/latestNews.svg"
+                      src="/images/News/latestNewsDark.svg"
                       alt="Newspaper Mentions"
                       width={300}
                       height={300}
@@ -246,7 +249,7 @@ export default function Achievements() {
               </AnimatePresence>
               <AnimatePresence>
                 <FadeUp key="innovation-project" duration={0.6} delay={0.8}>
-                  <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
+                  <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-sm dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
                     <h2 className="text-2xl font-bold text-teal-600 dark:text-teal-400">
                       Meet the Visionaries Behind 'Sawt AlRu'ya
                     </h2>

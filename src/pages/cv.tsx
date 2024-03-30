@@ -2,15 +2,12 @@ import { NextSeo } from "next-seo";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import FadeUp from "@/animation/FadeUp";
 import { AnimatePresence } from "framer-motion";
-import CursorTrailCanvas from "@/components/CursorTrailCanvas";
+import { IoMdDownload } from "react-icons/io";
+import Link from "next/link";
 
 export default function RenderCv() {
   return (
     <>
-      <CursorTrailCanvas
-        color="hsla(183, 64%, 27%, 0.4)"
-        className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
-      />
       <NextSeo
         title="Ghaiath Abdoush | Software & Web Developer - CV"
         description="View the comprehensive curriculum vitae (CV) of Ghaiath Abdoush, a talented software and web developer with expertise in AI, Machine Learning, and Full-Stack Development."
@@ -40,23 +37,33 @@ export default function RenderCv() {
           },
         ]}
       />
-      <div className="mx-auto max-w-5xl px-6 pt-20 text-center sm:px-14 md:mt-20 md:px-20">
+      <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6 md:px-20 md:pt-20">
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
-            <h1 className="bg-gradient-to-r from-teal-500 to-tera-500 bg-clip-text text-5xl font-bold text-transparent dark:from-teal-200 dark:to-teal-500 sm:text-6xl md:text-7xl">
+            <h1 className="bg-gradient-to-r from-teal-500 to-tera-500 bg-clip-text text-center text-3xl font-bold text-transparent dark:from-teal-200 dark:to-teal-500 sm:text-4xl md:text-5xl">
               My Curriculum Vitae
             </h1>
           </FadeUp>
         </AnimatePresence>
-        <div className="mx-auto mt-10 rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
+
+        <div className="mx-auto mt-8 max-w-3xl overflow-hidden rounded-xl border-2 border-teal-500 shadow-lg dark:shadow-xl">
           <AnimatePresence>
-            <FadeUp key="cv-iframe" duration={0.6}>
-              <iframe
-                src="/Ghaiath_Abdoush_CV.pdf"
-                width="100%"
-                height="800px"
-                className="rounded-lg"
-              />
+            <FadeUp key="cv-iframe" duration={0.6} delay={0.2}>
+              <div className="relative h-[600px] sm:h-[800px]">
+                <iframe
+                  src="/Ghaiath_Abdoush_CV.pdf"
+                  className="border-3 h-full w-full rounded-lg border border-teal-500 shadow-lg dark:shadow-xl"
+                  style={{ height: "100%", width: "100%" }}
+                />
+                <Link
+                  href="/Ghaiath_Abdoush_CV.pdf"
+                  target="_blank"
+                  download
+                  className="absolute bottom-4 right-4 flex items-center justify-center rounded-full bg-teal-500 p-2 text-white shadow-lg transition-all hover:bg-teal-600"
+                >
+                  <IoMdDownload size={24} />
+                </Link>
+              </div>
             </FadeUp>
           </AnimatePresence>
         </div>

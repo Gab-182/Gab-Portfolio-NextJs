@@ -13,10 +13,12 @@ import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 export default function About() {
   return (
     <>
-      <CursorTrailCanvas
-        color="hsla(183, 64%, 27%, 0.4)"
-        className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
-      />
+      <div className="hidden md:block">
+        <CursorTrailCanvas
+          color="hsla(183, 64%, 27%, 0.2)"
+          className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+        />
+      </div>
       <NextSeo
         title="About Ghaiath Abdoush | Software & Web Developer"
         description="Learn more about Ghaiath Abdoush, a Software and Web Developer with a passion for AI, Machine Learning, and Full-Stack Development."

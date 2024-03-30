@@ -98,7 +98,7 @@ export default function Navbar(props: TNavbar) {
 
       <Transition show={isModalOpen} as={Fragment}>
         <Dialog as="div" className="z-50" onClose={setIsModalOpen}>
-          <div className="fixed inset-0 flex items-center justify-center">
+          <div className="fixed inset-0 z-50 overflow-y-auto bg-zinc-100/90 dark:bg-teal-700/90 bg-opacity-90 dark:bg-opacity-90">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -127,7 +127,7 @@ export default function Navbar(props: TNavbar) {
                   ))}
                   <ThemeSwitch setClose={setIsModalOpen} />
                 </div>
-                <div className="absolute bottom-0 py-6">©2023 GAB </div>
+                <div className="absolute bottom-0 py-6">©2024 Ghaiath Abdoush </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>

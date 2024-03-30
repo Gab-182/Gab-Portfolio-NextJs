@@ -138,7 +138,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "IRC server",
-    favicon: "/images/projects/logos/irc.ico",
+    favicon: "/images/projects/logos/ircIcon.png",
     imageUrl: ["/images/projects/IRC_1.png"],
     description:
       "IRC server is a chat server that allows users to chat with each other. \
@@ -149,7 +149,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Market Analysis for National Clothing Chain",
-    favicon: "/images/projects/logos/stockpredictor.ico",
+    favicon: "/images/projects/logos/analysis.png",
     imageUrl: [
       "/images/projects/MAC_1.png",
       "/images/projects/MAC_2.png",
