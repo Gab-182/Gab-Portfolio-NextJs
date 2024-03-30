@@ -3,6 +3,7 @@ import Corosel from "@/components/Corosel";
 import { FiExternalLink } from "react-icons/fi";
 import { GithubIcon } from "@/components/Icons";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export type ProjectCardProps = {
   name: string;
@@ -36,21 +37,21 @@ export default function ProjectCard(props: ProjectCardProps) {
           <p className="text-xs md:text-sm">{props.description}</p>
         </div>
         <div className="mt-6 flex items-center justify-end gap-6">
-          <a
+          <Link
             href={props.sourceCodeHref}
             target="_blank"
-            className="flex items-center gap-1 text-xs underline md:text-sm"
+            className="flex items-center gap-1 text-xs underline md:text-sm hover:text-teal-600 dark:hover:text-teal-300"
           >
             <GithubIcon className="h-5 w-5" /> Source code
-          </a>
+          </Link>
           {props.liveWebsiteHref && (
-            <a
+            <Link
               href={props.liveWebsiteHref}
               target="_blank"
-              className="flex items-center gap-1 text-xs underline md:text-sm"
+              className="flex items-center gap-1 text-xs underline md:text-sm hover:text-teal-600 dark:hover:text-teal-300"
             >
               <FiExternalLink className="h-5 w-5" /> Live
-            </a>
+            </Link>
           )}
         </div>
       </div>

@@ -65,7 +65,7 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="max-w-3xl text-base font-semibold text-teal-600 dark:text-teal-300 sm:text-base md:text-2xl">
+              <span className="max-w-3xl text-base font-semibold text-teal-600 dark:text-teal-300 sm:text-base md:text-2xl hover:underline hover:text-teal-500 dark:hover:text-teal-500">
                 {" "}
                 42 Abu Dhabi
               </span>{" "}
