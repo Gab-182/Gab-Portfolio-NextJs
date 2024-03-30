@@ -129,7 +129,7 @@ export function ContactForm() {
         <button
           aria-label="open send mail modal"
           type="button"
-          className="fixed bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-600 p-2 text-white transition-colors duration-150 hover:bg-teal-500 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14 sm:p-3 lg:h-16 lg:w-16"
+          className=" fixed bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-600 p-2 text-white transition-colors duration-150 hover:bg-teal-500 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14 sm:p-3 lg:h-16 lg:w-16"
           onClick={() => setIsOpenModal(true)}
         >
           <MailIcon />
@@ -180,7 +180,7 @@ export function ContactForm() {
               <Dialog.Panel className="absolute m-4 w-[95%] max-w-xl overflow-y-auto rounded-2xl border-2 border-teal-100/20 bg-teal-600 px-6 py-8 shadow-lg shadow-teal-200/10 dark:bg-teal-700 md:px-10 md:py-16">
                 <div className="flex items-center justify-between">
                   <Dialog.Title className="flex items-center gap-1 text-2xl font-semibold text-zinc-100 sm:gap-2 md:text-4xl">
-                    <span className="inline-block h-8 w-8 sm:h-12 sm:w-12">
+                    <span className="inline-block h-8 w-8 sm:h-12 sm:w-12 ">
                       <MailIcon />
                     </span>
                     <span>Send Message</span>

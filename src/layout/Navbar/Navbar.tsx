@@ -37,7 +37,7 @@ export default function Navbar(props: TNavbar) {
   };
 
   return (
-    <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-2 sm:px-14 md:px-12">
+    <header className="relative z-50 mt-2 px-6 py-8 sm:mt-2 sm:px-14 md:px-12">
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
         {/* Logo */}
         <Link
@@ -105,11 +105,9 @@ export default function Navbar(props: TNavbar) {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed inset-0 z-50 overflow-y-auto bg-zinc-100/90 dark:bg-teal-700/90 bg-opacity-90 dark:bg-opacity-90 backdrop-blur-sm"
+              className="fixed inset-0 z-50 overflow-y-auto bg-zinc-100/90 bg-opacity-90 backdrop-blur-sm dark:bg-teal-700/90 dark:bg-opacity-90"
             >
-              <motion.div
-                className="absolute top-0 right-0 h-full w-3/4 max-w-xs rounded-l-3xl bg-zinc-100 p-6 shadow-lg backdrop-blur-md dark:bg-teal-700 md:p-10"
-              >
+              <motion.div className="absolute right-0 top-0 h-full w-3/4 max-w-xs rounded-l-3xl bg-zinc-100 p-6 shadow-lg backdrop-blur-md dark:bg-teal-700 md:p-10">
                 <div className="flex justify-between">
                   <div className="text-3xl font-bold text-teal-600 dark:text-zinc-100">
                     Menu
@@ -133,7 +131,7 @@ export default function Navbar(props: TNavbar) {
                       <span
                         className={classNames(
                           pathName === link.href ? "w-full" : "w-0",
-                          "absolute -bottom-1 left-0 h-1 rounded-lg bg-teal-600 transition-[width] duration-300 group-hover:w-full dark:bg-zinc-100"
+                          "absolute -bottom-1 left-0 h-1 rounded-lg bg-teal-600 transition-[width] duration-300 group-hover:w-full dark:bg-zinc-100",
                         )}
                       ></span>
                       {link.title}
