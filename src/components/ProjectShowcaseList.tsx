@@ -28,7 +28,7 @@ export default function ProjectShowcaseList(props: ProjectList) {
     >
       <span
         className={classNames(
-          "hidden text-6xl font-semibold transition-colors duration-300 lg:block",
+          "hidden text-3xl font-semibold transition-colors duration-300 lg:block",
           props.activeProject === props.data.index
             ? "text-teal-600 dark:text-teal-400"
             : "text-teal-600/30 dark:text-teal-600/50",
@@ -43,7 +43,7 @@ export default function ProjectShowcaseList(props: ProjectList) {
         <Link href={props.data.href} className="relative max-w-max">
           <span
             className={classNames(
-              "hidden text-6xl font-semibold transition-colors duration-300 lg:block",
+              "hidden text-3xl font-semibold transition-colors duration-300 lg:block",
               props.activeProject === props.data.index
                 ? "text-teal-600 dark:text-teal-400"
                 : "text-teal-600/30 dark:text-teal-600/50",
@@ -61,8 +61,13 @@ export default function ProjectShowcaseList(props: ProjectList) {
             )}
           ></span>
         </Link>
-        <p className="max-w-xl text-base font-semibold text-zinc-800 dark:text-zinc-100 sm:text-lg">
-          {props.data.tags.map((tag) => `#${tag} `)}
+        <p className="max-w-xl text-base font-semibold text-zinc-800 dark:text-zinc-100 sm:text-md">
+          {props.data.tags.map((tag, index) => (
+            <span key={index}>
+              <span className="text-sm font-semibold italic text-teal-500">#</span>
+              <span className="text-sm font-light italic">{tag}</span>{" "}
+            </span>
+          ))}
         </p>
       </div>
     </motion.div>

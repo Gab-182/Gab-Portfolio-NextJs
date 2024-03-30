@@ -33,7 +33,7 @@ export default function Skills() {
   return (
     <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
-        <h2 className="text-xl font-semibold sm:text-4xl">Skills</h2>
+        <h2 className="text-2xl font-semibold sm:text-4xl">Skills</h2>
         <AnimatePresence>
           <div className="mt-4">
             <span className="text-xs font-semibold sm:text-sm">Languages</span>
@@ -55,7 +55,7 @@ export default function Skills() {
         <AnimatePresence>
           <div className="mt-4">
             <span className="text-xs font-semibold sm:text-sm">
-              Web Dev frameworks & libraries 
+              Web Dev frameworks & libraries
             </span>
             <div className="mt-2 flex flex-wrap gap-4 text-xl dark:text-zinc-100">
               {LIBRARY_FRAMEWORK.map((pill, index) => (
@@ -76,7 +76,7 @@ export default function Skills() {
         <AnimatePresence>
           <div className="mt-4">
             <span className="text-xs font-semibold sm:text-sm">
-              Machine Learning frameworks 
+              Machine Learning frameworks
             </span>
             <div className="mt-2 flex flex-wrap gap-4 text-xl dark:text-zinc-100">
               {MACHINE_LEARNING_FRAMEWORKS.map((pill, index) => (

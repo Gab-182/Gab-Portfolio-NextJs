@@ -70,7 +70,7 @@ export default function ProjectShowcase(props: TProjectShowcase) {
             </motion.div>
           </AnimatePresence>
         </div>
-        <h2 className="text-xl font-semibold sm:text-3xl">My projects</h2>
+        <h2 className="text-2xl font-semibold sm:text-4xl">Featured projects</h2>
         <div className="hidden flex-col gap-6 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:flex">
           {props.projects.map((proj, index) => (
             <ProjectShowcaseList
@@ -94,14 +94,19 @@ export default function ProjectShowcase(props: TProjectShowcase) {
                 </span>
                 <span
                   key={proj.title}
-                  className="-underline-offset-1 text-3xl font-semibold text-teal-600 underline transition-colors duration-300 dark:text-teal-400 sm:text-4xl md:text-5xl lg:hidden"
+                  className="-underline-offset-1 text-2xl font-semibold text-teal-600 underline transition-colors duration-300 dark:text-teal-400 sm:text-4xl md:text-5xl lg:hidden"
                 >
                   {proj.title}
                 </span>
               </div>
               <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-zinc-800 dark:text-zinc-100 sm:text-lg">
                 {proj.tags.map((tag, index) => (
-                  <span key={index}>#{tag}</span>
+                  <span key={index}>
+                    <span className="text-sm font-semibold italic text-teal-500">
+                      #
+                    </span>
+                    <span className="text-sm font-light italic">{tag}</span>{" "}
+                  </span>
                 ))}
               </p>
             </Link>
