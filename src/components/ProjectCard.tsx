@@ -23,7 +23,8 @@ export default function ProjectCard(props: ProjectCardProps) {
         type: "spring",
         duration: 0.4,
       }}
-      className="w-full overflow-hidden rounded-lg border border-zinc-500/30 bg-white transition-shadow duration-150 hover:shadow-md dark:border-teal-200/10 dark:bg-zinc-800 dark:hover:shadow-sm dark:hover:shadow-teal-200/50"
+      className="w-full overflow-hidden rounded-lg border border-zinc-500/30 bg-white transition-shadow duration-150 hover:shadow-md
+      dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg"
     >
       <Corosel images={props.imageUrl} aspectRatio={2.1} />
       <div className="p-3 sm:p-4">
@@ -40,7 +41,7 @@ export default function ProjectCard(props: ProjectCardProps) {
           <Link
             href={props.sourceCodeHref}
             target="_blank"
-            className="flex items-center gap-1 text-xs underline md:text-sm hover:text-teal-600 dark:hover:text-teal-300"
+            className="flex items-center gap-1 text-xs underline hover:text-teal-600 dark:hover:text-teal-300 md:text-sm"
           >
             <GithubIcon className="h-5 w-5" /> Source code
           </Link>
@@ -48,7 +49,7 @@ export default function ProjectCard(props: ProjectCardProps) {
             <Link
               href={props.liveWebsiteHref}
               target="_blank"
-              className="flex items-center gap-1 text-xs underline md:text-sm hover:text-teal-600 dark:hover:text-teal-300"
+              className="flex items-center gap-1 text-xs underline hover:text-teal-600 dark:hover:text-teal-300 md:text-sm"
             >
               <FiExternalLink className="h-5 w-5" /> Live
             </Link>

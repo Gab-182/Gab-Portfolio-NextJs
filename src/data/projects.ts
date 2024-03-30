@@ -52,7 +52,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListProps[] = [
     ],
     image: {
       LIGHT: "/images/projects/SAR_1.png",
-      DARK: "/images/projects/SAR_1.png",
+      DARK: "/images/projects/SAR_11.png",
     },
   },
   {
@@ -84,7 +84,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "SawtAlRuya",
     favicon: "/images/projects/logos/sawtalruya.ico",
-    imageUrl: ["/images/projects/SAR_1.png", "/images/projects/SAR_2.png"],
+    imageUrl: ["/images/projects/SAR_1.png", "/images/projects/SAR_11.png"],
     description:
       "Everything in our world is meant to be seen. That’s why we created SawtAlRuya, an AI-powered app that helps visually impaired people to \
       see the world around them. It uses the latest AI technologies to describe the world around them, and we used for that GPT-3.5 turbo API, \

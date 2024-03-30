@@ -3,10 +3,17 @@ import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS_CARD } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import Link from "next/link";
+import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 
 export default function Projects() {
   return (
     <>
+      <div className="hidden md:block">
+        <CursorTrailCanvas
+          color="hsla(183, 64%, 27%, 0.2)"
+          className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+        />
+      </div>
       <NextSeo
         title="Projects by Ghaiath Abdoush - Software & Web Developer Portfolio"
         description="Explore a collection of projects by Ghaiath Abdoush (Gab), a Software and Web Developer with a passion for AI, Machine Learning, and Full-Stack Development."
@@ -45,7 +52,7 @@ export default function Projects() {
               Here are some of the projects I&apos;d like to share
             </span>
           </div>
-          <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2 ">
             {PROJECTS_CARD.map((card, index) => (
               <ProjectCard key={index} {...card} />
             ))}
@@ -65,7 +72,7 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="max-w-3xl text-base font-semibold text-teal-600 dark:text-teal-300 sm:text-base md:text-2xl hover:underline hover:text-teal-500 dark:hover:text-teal-500">
+              <span className="max-w-3xl text-base font-semibold text-teal-600 hover:text-teal-500 hover:underline dark:text-teal-300 dark:hover:text-teal-500 sm:text-base md:text-2xl">
                 {" "}
                 42 Abu Dhabi
               </span>{" "}
