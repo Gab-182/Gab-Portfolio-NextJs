@@ -7,7 +7,7 @@ import { AnimatedLogo } from "@/animation/AnimatedLogo";
 import { classNames } from "@/utility/classNames";
 import MenuLogo from "@/layout/Navbar/MenuButton";
 import ThemeSwitch from "@/layout/Navbar/ThemeSwitch";
-import { Dialog, Transition } from "@headlessui/react";
+import { IoClose } from "react-icons/io5";
 
 export type NavbarRoute = {
   title: string;
@@ -50,7 +50,12 @@ export default function Navbar(props: TNavbar) {
           </div>
         </Link>
 
-        {/* Navigation */}
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <MenuLogo open={isModalOpen} toggle={toggleModal} />
+        </div>
+
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-teal-600/50 md:flex">
           <ul className="flex gap-2 text-sm font-medium">
             {props.routes.map((_link, index) => {
@@ -91,48 +96,59 @@ export default function Navbar(props: TNavbar) {
           </ul>
           <ThemeSwitch />
         </nav>
-        <AnimatePresence>
-          <MenuLogo open={isModalOpen} toggle={toggleModal} />
-        </AnimatePresence>
-      </div>
 
-      <Transition show={isModalOpen} as={Fragment}>
-        <Dialog as="div" className="z-50" onClose={setIsModalOpen}>
-          <div className="fixed inset-0 z-50 overflow-y-auto bg-zinc-100/90 dark:bg-teal-700/90 bg-opacity-90 dark:bg-opacity-90">
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 bottom-full"
-              enterTo="opacity-100 bottom-[15%]"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 bottom-[15%]"
-              leaveTo="opacity-0 bottom-full"
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isModalOpen && (
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="fixed inset-0 z-50 overflow-y-auto bg-zinc-100/90 dark:bg-teal-700/90 bg-opacity-90 dark:bg-opacity-90 backdrop-blur-sm"
             >
-              <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-teal-100/20 border-teal-600 bg-zinc-100 px-6 py-8 text-teal-600 shadow-lg shadow-teal-200/10 dark:bg-teal-700 dark:text-zinc-100 md:px-10 md:py-16">
-                <div className="pointer-events-auto flex flex-col items-center gap-6 text-center">
+              <motion.div
+                className="absolute top-0 right-0 h-full w-3/4 max-w-xs rounded-l-3xl bg-zinc-100 p-6 shadow-lg backdrop-blur-md dark:bg-teal-700 md:p-10"
+              >
+                <div className="flex justify-between">
+                  <div className="text-3xl font-bold text-teal-600 dark:text-zinc-100">
+                    Menu
+                  </div>
+                  <button
+                    className="text-teal-600 dark:text-zinc-100"
+                    onClick={toggleModal}
+                  >
+                    <IoClose size={24} />
+                  </button>
+                </div>
+                <div className="mt-6 flex flex-col items-start gap-4 text-left">
                   {props.routes.map((link, i) => (
-                    <button
+                    <motion.button
                       key={i}
-                      className="group relative py-2 text-3xl font-medium"
+                      className="group relative py-2 text-2xl font-medium text-teal-600 hover:text-teal-800 dark:text-zinc-100 dark:hover:text-white"
                       onClick={() => handleClick(link.href)}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       <span
                         className={classNames(
                           pathName === link.href ? "w-full" : "w-0",
-                          "absolute -bottom-1 left-0 h-1 rounded-lg bg-teal-600 transition-[width] duration-300 group-hover:w-full dark:bg-zinc-100",
+                          "absolute -bottom-1 left-0 h-1 rounded-lg bg-teal-600 transition-[width] duration-300 group-hover:w-full dark:bg-zinc-100"
                         )}
                       ></span>
                       {link.title}
-                    </button>
+                    </motion.button>
                   ))}
+                </div>
+                <div className="mt-auto flex justify-center">
                   <ThemeSwitch setClose={setIsModalOpen} />
                 </div>
-                <div className="absolute bottom-0 py-6">©2024 Ghaiath Abdoush </div>
-              </Dialog.Panel>
-            </Transition.Child>
-          </div>
-        </Dialog>
-      </Transition>
+                <div className="mt-6 text-center">©2024 Ghaiath Abdoush</div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </header>
   );
 }

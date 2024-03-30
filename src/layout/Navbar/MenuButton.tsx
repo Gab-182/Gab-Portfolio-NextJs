@@ -18,7 +18,7 @@ type TMenuLogo = {
 export default function MenuLogo(props: TMenuLogo) {
   return (
     <button
-      aria-label="open menu"
+      aria-label="Open Menu"
       onClick={props.toggle}
       className={classNames(
         "relative z-50 flex h-12 w-12 select-none items-center gap-1 rounded-full p-3 py-1 font-semibold shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-teal-600/50 md:hidden",
