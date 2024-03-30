@@ -37,7 +37,7 @@ export default function RenderCv() {
           },
         ]}
       />
-      <section className="mx-auto mb-16 mt-6 w-full px-6 sm:mb-20 sm:mt-12 sm:px-14 md:mb-20 md:px-14 lg:mb-32 xl:mb-40">
+      <section className="xl:mb-12w mx-auto mb-16 mt-6 w-full px-6 sm:mb-20 sm:mt-12 sm:px-14 md:mb-20 md:px-14 lg:mb-32">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-start text-2xl font-semibold md:text-4xl">
             Curriculum Vitae
