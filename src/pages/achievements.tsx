@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { NextSeo } from "next-seo";
-import FadeUp from "@/animation/FadeUp";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 
@@ -45,26 +45,36 @@ export default function Achievements() {
         ]}
       />
 
-      <div className="mx-auto max-w-7xl px-6 pt-20 text-center sm:px-14 md:mt-20 md:px-20">
-        <AnimatePresence>
-          <FadeUp key="title-greeting" duration={0.6}>
-            <h1 className="bg-gradient-to-r from-teal-500 to-tera-500 bg-clip-text text-5xl font-bold text-transparent dark:from-teal-200 dark:to-teal-500 sm:text-6xl md:text-7xl">
-              Achievements and Reflections
-            </h1>
-          </FadeUp>
-        </AnimatePresence>
+      <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
+        <div className="mx-auto max-w-7xl">
+          <h1 className="text-start text-2xl font-semibold md:text-4xl">
+            Achievements and Reflections
+          </h1>
+          <div className="my-2 text-start">
+            <span className="max-w-3xl text-base font-semibold text-teal-600 dark:text-teal-300 sm:text-base md:text-xl">
+              Here are some of the achievements and reflections I&apos;d like to
+              share
+            </span>
+          </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          <div className="col-span-2 flex flex-col gap-6 lg:col-span-1">
-            <AnimatePresence>
-              <FadeUp key="newspaper-mentions" duration={0.6} delay={0.2}>
+          <motion.div
+            initial={{ y: 80 }}
+            whileInView={{ y: 0 }}
+            transition={{
+              type: "spring",
+              duration: 0.4,
+            }}
+            className="mt-10 grid gap-6 lg:grid-cols-3"
+          >
+            <div className="col-span-2 flex flex-col gap-6 lg:col-span-1">
+              <AnimatePresence>
                 <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
-                  <h2 className="text-2xl font-bold">
+                  <h2 className="text-xl font-semibold">
                     I am on the national newspapers!
                   </h2>
                   <ul className="mt-4 list-disc pl-4">
                     <li className="mt-2">
-                      <a
+                      <Link
                         href="https://uaenews247.com/2023/04/24/42-abu-dhabi-continues-to-empower-its-students-to-propel-the-future-of-technology-in-the-emirate/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -73,13 +83,13 @@ export default function Achievements() {
                         <Image
                           src="/images/News/UaeNews247.ico"
                           alt="UAE News 24/7"
-                          width={45}
-                          height={45}
+                          width={35}
+                          height={35}
                         />
-                        <span className="text-md font-bold text-teal-600 hover:cursor-pointer dark:text-teal-400">
+                        <span className="text-sm font-bold text-teal-600 hover:cursor-pointer dark:text-teal-400">
                           UAE News 24/7
                         </span>
-                      </a>
+                      </Link>
                       <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi continues to empower its students to propel
                         the future of technology in the Emirate by developing
@@ -87,7 +97,7 @@ export default function Achievements() {
                       </p>
                     </li>
                     <li className="mt-2">
-                      <a
+                      <Link
                         href="https://www.biznesstransform.com/42-abu-dhabi-al-hathboor-bikal-ai-host-hackathon-on-computer-vision-using-python-frameworks/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -96,13 +106,13 @@ export default function Achievements() {
                         <Image
                           src="/images/News/BNews.ico"
                           alt="Bizness Transform"
-                          width={45}
-                          height={45}
+                          width={35}
+                          height={35}
                         />
-                        <span className="text-md font-bold text-teal-600 hover:cursor-pointer dark:text-teal-400">
+                        <span className="text-sm font-bold text-teal-600 hover:cursor-pointer dark:text-teal-400">
                           Bizness Transform
                         </span>
-                      </a>
+                      </Link>
                       <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi and Al Hathboor Bikal AI host a hackathon
                         on computer vision using Python frameworks...
@@ -110,7 +120,7 @@ export default function Achievements() {
                     </li>
 
                     <li className="mt-2">
-                      <a
+                      <Link
                         href="https://theprint.in/world/42-abu-dhabi-empowers-students-for-tech-future-with-cutting-edge-projects/1530708/?amp"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -119,13 +129,13 @@ export default function Achievements() {
                         <Image
                           src="/images/News/thePrintIcon.ico"
                           alt="The Print Newspaper"
-                          width={45}
-                          height={45}
+                          width={35}
+                          height={35}
                         />
-                        <span className="text-md font-bold text-teal-600 hover:cursor-pointer dark:text-teal-400">
+                        <span className="text-sm font-bold text-teal-600 hover:cursor-pointer dark:text-teal-400">
                           The Print Newspaper
                         </span>
-                      </a>
+                      </Link>
                       <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi Coding School continues to cement its
                         position as a leading talent incubator for developing
@@ -134,7 +144,7 @@ export default function Achievements() {
                       </p>
                     </li>
                     <li className="mt-2">
-                      <a
+                      <Link
                         href="https://www.bahrainthisweek.com/42-abu-dhabi-continues-to-empower-its-students-to-propel-the-future-of-technology-in-the-emirate-by-developing-cutting-edge-projects/?amp"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -143,13 +153,13 @@ export default function Achievements() {
                         <Image
                           src="/images/News/bahrineNews.ico"
                           alt="Bahrain This Week"
-                          width={45}
-                          height={45}
+                          width={35}
+                          height={35}
                         />
-                        <span className="text-md font-bold text-teal-600 hover:cursor-pointer dark:text-teal-400">
+                        <span className="text-sm font-bold text-teal-600 hover:cursor-pointer dark:text-teal-400">
                           Bahrain This Week
                         </span>
-                      </a>
+                      </Link>
                       <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi's students developed a project featuring an
                         AI machine-learning model that predicts the occurrence
@@ -168,57 +178,85 @@ export default function Achievements() {
                     />
                   </div>
                 </div>
-              </FadeUp>
-            </AnimatePresence>
-          </div>
+              </AnimatePresence>
+            </div>
 
-          <div className="col-span-2">
-            <AnimatePresence>
-              <FadeUp key="achievements-description" duration={0.6} delay={0.4}>
+            <div className="col-span-2">
+              <AnimatePresence>
                 <div className="rounded-xl border-2 border-gray-200 bg-white p-6 text-start shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
                   <p>
-                    Throughout my journey exploring AI, machine learning, and
-                    data science, I've been on a quest for knowledge and
-                    skill-building. One memorable experience was my involvement
-                    in the healathon, where I teamed up with talented
-                    individuals for an intensive bootcamp. Together, we tackled
-                    a challenging project: creating a machine learning model to
-                    early predict chronic kidney diseases (CKD).
+                    Throughout my journey exploring{" "}
+                    <span className="font-semibold text-teal-600">AI</span>,{" "}
+                    <span className="italic">machine learning</span>, and{" "}
+                    <span className="italic">data science</span>, I've been on a
+                    quest for knowledge and skill-building. One memorable
+                    experience was my involvement in the{" "}
+                    <span className="font-semibold text-teal-600">
+                      healathon
+                    </span>
+                    , where I teamed up with talented individuals for an
+                    intensive bootcamp. Together, we tackled a challenging
+                    project: creating a machine learning model to{" "}
+                    <span className="font-semibold text-teal-600">
+                      early predict chronic kidney diseases (CKD)
+                    </span>
+                    .
                   </p>
                   <p className="mt-4">
                     We also crafted a user-friendly web app to improve
-                    communication between healthcare providers and patients. Our
-                    hard work paid off when we clinched the top spot globally,
-                    earning recognition in national newspapers. Beyond this,
-                    I've enjoyed participating in coding challenges, including
-                    those hosted by 42 Abu Dhabi, Beacon Red and Bikal Tech.
-                    These experiences have been invaluable, offering diverse
+                    communication between{" "}
+                    <span className="font-semibold text-teal-600">
+                      healthcare providers
+                    </span>{" "}
+                    and patients. Our hard work paid off when we clinched the
+                    top spot globally, earning recognition in{" "}
+                    <span className="font-semibold text-teal-600">
+                      national newspapers
+                    </span>
+                    . Beyond this, I've enjoyed participating in coding
+                    challenges, including those hosted by{" "}
+                    <span className="font-semibold text-teal-600">
+                      42 Abu Dhabi
+                    </span>
+                    ,{" "}
+                    <span className="font-semibold text-teal-600">
+                      Beacon Red
+                    </span>
+                    , and{" "}
+                    <span className="font-semibold text-teal-600">
+                      Bikal Tech
+                    </span>
+                    . These experiences have been invaluable, offering diverse
                     learning opportunities.
                   </p>
                   <p className="mt-4">
                     I'm particularly proud of our team's achievement in
-                    developing 'Sawt AlRu'ya,' an app that leverages the
-                    computer vision technology to empower visually impaired
-                    individuals. This app converts live video into real-time
-                    text descriptions and spoken words, enhancing daily
-                    experiences.
+                    developing '
+                    <span className="font-semibold text-teal-600">
+                      Sawt AlRu'ya
+                    </span>
+                    ,' an app that leverages the{" "}
+                    <span className="italic">computer vision technology</span>{" "}
+                    to empower visually impaired individuals. This app converts
+                    live video into real-time text descriptions and spoken
+                    words, enhancing daily experiences.
                   </p>
                   <p className="mt-4">
                     As I continue on my journey, I'm committed to learning and
-                    contributing to the exciting field of AI and data science.
+                    contributing to the exciting field of{" "}
+                    <span className="font-semibold text-teal-600">AI</span> and{" "}
+                    <span className="italic">data science</span>.
                   </p>
                 </div>
-              </FadeUp>
-            </AnimatePresence>
+              </AnimatePresence>
 
-            <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <AnimatePresence>
-                <FadeUp key="healathon-hackathon" duration={0.6} delay={0.6}>
+              <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <AnimatePresence>
                   <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
-                    <h2 className="text-2xl font-bold text-teal-600 dark:text-teal-400">
+                    <h2 className="text-center text-xl font-semibold text-teal-600 dark:text-teal-400">
                       Healathon Hackathon Winners
                     </h2>
-                    <a
+                    <Link
                       href="https://www.linkedin.com/posts/myraa-technologies_launch-speakers-healathon-activity-7045293165972508672-V7k6?utm_source=share&utm_medium=member_desktop"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -231,29 +269,30 @@ export default function Achievements() {
                         height={400}
                         className="rounded-lg"
                       />
-                    </a>
+                    </Link>
                     <p className="mt-2 text-start">
                       Survivor Stories in Healthcare & HealAThon Winner
                       Announcement...
                     </p>
-                    <a
-                      href="https://www.linkedin.com/posts/myraa-technologies_launch-speakers-healathon-activity-7045293165972508672-V7k6?utm_source=share&utm_medium=member_desktop"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-2 inline-block rounded-md bg-teal-600 px-4 py-2 text-white hover:bg-teal-700"
-                    >
-                      More
-                    </a>
+
+                    <div className="mt-2 flex justify-center">
+                      <Link
+                        href="https://www.linkedin.com/posts/myraa-technologies_launch-speakers-healathon-activity-7045293165972508672-V7k6?utm_source=share&utm_medium=member_desktop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-block rounded-md bg-teal-600 px-4 py-2 text-white hover:bg-teal-700"
+                      >
+                        More
+                      </Link>
+                    </div>
                   </div>
-                </FadeUp>
-              </AnimatePresence>
-              <AnimatePresence>
-                <FadeUp key="innovation-project" duration={0.6} delay={0.8}>
+                </AnimatePresence>
+                <AnimatePresence>
                   <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-sm dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
-                    <h2 className="text-2xl font-bold text-teal-600 dark:text-teal-400">
+                    <h2 className="text-center text-xl font-semibold text-teal-600 dark:text-teal-400">
                       Meet the Visionaries Behind 'Sawt AlRu'ya
                     </h2>
-                    <a
+                    <Link
                       href="https://www.biznesstransform.com/42-abu-dhabi-al-hathboor-bikal-ai-host-hackathon-on-computer-vision-using-python-frameworks/"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -266,7 +305,7 @@ export default function Achievements() {
                         height={400}
                         className="rounded-lg"
                       />
-                    </a>
+                    </Link>
                     <p className="mt-2 text-start">
                       The winning team developed 'Sawt AlRu'ya,' an app
                       utilizing advanced computer vision and AI. It transforms
@@ -274,21 +313,23 @@ export default function Achievements() {
                       them into spoken words, empowering visually impaired
                       individuals and enhancing their daily experiences.
                     </p>
-                    <a
-                      href="https://www.biznesstransform.com/42-abu-dhabi-al-hathboor-bikal-ai-host-hackathon-on-computer-vision-using-python-frameworks/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-2 inline-block rounded-md bg-teal-600 px-4 py-2 text-white hover:bg-teal-700"
-                    >
-                      More
-                    </a>
+                    <div className="mt-2 flex justify-center">
+                      <Link
+                        href="https://www.biznesstransform.com/42-abu-dhabi-al-hathboor-bikal-ai-host-hackathon-on-computer-vision-using-python-frameworks/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-block rounded-md bg-teal-600 px-4 py-2 text-white hover:bg-teal-700"
+                      >
+                        More
+                      </Link>
+                    </div>
                   </div>
-                </FadeUp>
-              </AnimatePresence>
+                </AnimatePresence>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

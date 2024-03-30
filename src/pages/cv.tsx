@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import FadeUp from "@/animation/FadeUp";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { IoMdDownload } from "react-icons/io";
 import Link from "next/link";
 
@@ -37,37 +37,44 @@ export default function RenderCv() {
           },
         ]}
       />
-      <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6 md:px-20 md:pt-20">
-        <AnimatePresence>
-          <FadeUp key="title-greeting" duration={0.6}>
-            <h1 className="bg-gradient-to-r from-teal-500 to-tera-500 bg-clip-text text-center text-3xl font-bold text-transparent dark:from-teal-200 dark:to-teal-500 sm:text-4xl md:text-5xl">
-              My Curriculum Vitae
-            </h1>
-          </FadeUp>
-        </AnimatePresence>
+      <section className="mx-auto mb-16 mt-6 w-full px-6 sm:mb-20 sm:mt-12 sm:px-14 md:mb-20 md:px-14 lg:mb-32 xl:mb-40">
+        <div className="mx-auto max-w-7xl">
+          <h1 className="text-start text-2xl font-semibold md:text-4xl">
+            Curriculum Vitae
+          </h1>
+          <div className="my-2 text-start">
+            <span className="max-w-3xl text-base font-semibold text-teal-600 dark:text-teal-300 sm:text-base md:text-xl">
+              Here is my curriculum vitae that I&apos;d like to share 📄
+            </span>
+          </div>
 
-        <div className="mx-auto mt-8 max-w-3xl overflow-hidden rounded-xl border-2 border-teal-500 shadow-lg dark:shadow-xl">
           <AnimatePresence>
-            <FadeUp key="cv-iframe" duration={0.6} delay={0.2}>
-              <div className="relative h-[600px] sm:h-[800px]">
-                <iframe
-                  src="/Ghaiath_Abdoush_CV.pdf"
-                  className="border-3 h-full w-full rounded-lg border border-teal-500 shadow-lg dark:shadow-xl"
-                  style={{ height: "100%", width: "100%" }}
-                />
-                <Link
-                  href="/Ghaiath_Abdoush_CV.pdf"
-                  target="_blank"
-                  download
-                  className="absolute bottom-4 right-4 flex items-center justify-center rounded-full bg-teal-500 p-2 text-white shadow-lg transition-all hover:bg-teal-600"
-                >
-                  <IoMdDownload size={24} />
-                </Link>
-              </div>
-            </FadeUp>
+            <motion.div
+              initial={{ y: 80 }}
+              whileInView={{ y: 0 }}
+              transition={{
+                type: "spring",
+                duration: 0.4,
+              }}
+              className="relative mt-8 h-[600px] sm:h-[800px]"
+            >
+              <iframe
+                src="/Ghaiath_Abdoush_CV.pdf"
+                className="border-3 h-full w-full rounded-lg border border-teal-500 shadow-lg dark:shadow-xl"
+                style={{ height: "100%", width: "100%" }}
+              />
+              <Link
+                href="/Ghaiath_Abdoush_CV.pdf"
+                target="_blank"
+                download
+                className="absolute bottom-4 right-4 flex items-center justify-center rounded-full bg-teal-500 p-2 text-white shadow-lg transition-all hover:bg-teal-600"
+              >
+                <IoMdDownload size={24} />
+              </Link>
+            </motion.div>
           </AnimatePresence>
         </div>
-      </div>
+      </section>
     </>
   );
 }

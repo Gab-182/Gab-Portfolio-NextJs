@@ -42,6 +42,11 @@ export default function Hero() {
               <span className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl">
                 Software & Web Developer
               </span>
+
+              <span className="text-md px-4 font-semibold text-teal-600 dark:text-teal-500 sm:text-xl md:text-xl">
+                <span className="glow">AI</span> <span>&</span>{" "}
+                <span className="glow">DATA SCIENCE</span> ENTHUSIAST
+              </span>
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-8 max-w-3xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-2xl">
@@ -53,7 +58,8 @@ export default function Hero() {
                   {" "}
                   Ghaiath Abdoush
                 </span>{" "}
-                , Empowering ideas to take flight with the alchemy of code and design.
+                , Empowering ideas to take flight with the alchemy of code and
+                design.
               </div>
             </FadeUp>
           </AnimatePresence>
