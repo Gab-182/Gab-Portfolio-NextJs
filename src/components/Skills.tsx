@@ -30,110 +30,40 @@ function SkillPill(props: SkillPillProps) {
 export default function Skills() {
   const isMobile = useScreenBreakpoint(640);
   const isMobileDebonced = useDebounceValue(isMobile, 600);
+  const skillCategories = [
+    { title: "Languages", data: LANGUAGES },
+    { title: "Web Dev Frameworks & Libraries", data: LIBRARY_FRAMEWORK },
+    { title: "Machine Learning Frameworks", data: MACHINE_LEARNING_FRAMEWORKS },
+    { title: "Databases & ORMs", data: DATABASE_ORM_PILL },
+    { title: "Tools & Technologies", data: TOOLS_TECHNOLOGIES },
+  ];
   return (
     <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
         <h2 className="text-2xl font-semibold sm:text-4xl">Skills</h2>
-        <AnimatePresence>
-          <div className="mt-4">
-            <span className="text-xs font-semibold sm:text-sm">Languages</span>
-            <div className="mt-2 flex flex-wrap gap-4 text-xl dark:text-zinc-100">
-              {LANGUAGES.map((pill, index) => (
-                <FadeRight
-                  key={`lang-${index}`}
-                  duration={0.4}
-                  delay={0.1 + index * 0.1}
-                  whileInView={!isMobileDebonced}
-                  className="-z-20"
-                >
-                  <SkillPill {...pill} />
-                </FadeRight>
-              ))}
-            </div>
-          </div>
-        </AnimatePresence>
-        <AnimatePresence>
-          <div className="mt-4">
-            <span className="text-xs font-semibold sm:text-sm">
-              Web Dev frameworks & libraries
-            </span>
-            <div className="mt-2 flex flex-wrap gap-4 text-xl dark:text-zinc-100">
-              {LIBRARY_FRAMEWORK.map((pill, index) => (
-                <FadeRight
-                  key={`lib-frame-${index}`}
-                  duration={0.4}
-                  delay={0.1 + index * 0.1}
-                  whileInView={!isMobileDebonced}
-                  className="-z-20"
-                >
-                  <SkillPill {...pill} />
-                </FadeRight>
-              ))}
-            </div>
-          </div>
-        </AnimatePresence>
 
-        <AnimatePresence>
-          <div className="mt-4">
-            <span className="text-xs font-semibold sm:text-sm">
-              Machine Learning frameworks
-            </span>
-            <div className="mt-2 flex flex-wrap gap-4 text-xl dark:text-zinc-100">
-              {MACHINE_LEARNING_FRAMEWORKS.map((pill, index) => (
-                <FadeRight
-                  key={`lib-frame-${index}`}
-                  duration={0.4}
-                  delay={0.1 + index * 0.1}
-                  whileInView={!isMobileDebonced}
-                  className="-z-20"
-                >
-                  <SkillPill {...pill} />
-                </FadeRight>
-              ))}
+        {skillCategories.map((category, index) => (
+          <AnimatePresence key={`category-${index}`}>
+            <div className="mt-8">
+              <span className="text-xs font-semibold sm:text-sm">
+                {category.title}
+              </span>
+              <div className="mt-2 flex flex-wrap gap-4 text-xl dark:text-zinc-100">
+                {category.data.map((pill, index) => (
+                  <FadeRight
+                    key={`pill-${index}`}
+                    duration={0.1}
+                    delay={0.1 + index * 0.1}
+                    whileInView={!isMobileDebonced}
+                    className="-z-20"
+                  >
+                    <SkillPill {...pill} />
+                  </FadeRight>
+                ))}
+              </div>
             </div>
-          </div>
-        </AnimatePresence>
-
-        <AnimatePresence>
-          <div className="mt-4">
-            <span className="text-xs font-semibold sm:text-sm">
-              Databases and ORMs
-            </span>
-            <div className="mt-2 flex flex-wrap gap-3">
-              {DATABASE_ORM_PILL.map((pill, index) => (
-                <FadeRight
-                  key={`database-orm-${index}`}
-                  duration={0.4}
-                  delay={0.1 + index * 0.1}
-                  whileInView={!isMobileDebonced}
-                  className="-z-20"
-                >
-                  <SkillPill {...pill} />
-                </FadeRight>
-              ))}
-            </div>
-          </div>
-        </AnimatePresence>
-        <AnimatePresence>
-          <div className="mt-4">
-            <span className="text-xs font-semibold sm:text-sm">
-              Tools and technologies
-            </span>
-            <div className="mt-2 flex flex-wrap gap-3">
-              {TOOLS_TECHNOLOGIES.map((pill, index) => (
-                <FadeRight
-                  key={`tools-techs-${index}`}
-                  duration={0.4}
-                  delay={0.1 + index * 0.1}
-                  whileInView={!isMobileDebonced}
-                  className="-z-20"
-                >
-                  <SkillPill {...pill} />
-                </FadeRight>
-              ))}
-            </div>
-          </div>
-        </AnimatePresence>
+          </AnimatePresence>
+        ))}
       </div>
     </section>
   );
