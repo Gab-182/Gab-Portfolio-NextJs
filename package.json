@@ -18,7 +18,7 @@
     "@headlessui/react": "^1.7.17",
     "@tailwindcss/forms": "^0.5.6",
     "@vercel/analytics": "^1.1.1",
-    "@vercel/speed-insights": "^1.0.2",
+    "@vercel/speed-insights": "^1.0.10",
     "classnames": "^2.5.1",
     "formik": "^2.4.5",
     "framer-motion": "^10.12.16",
