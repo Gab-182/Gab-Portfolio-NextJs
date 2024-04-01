@@ -2,7 +2,7 @@
 FROM node:18-alpine AS dependencies
 WORKDIR /app
 COPY package.json ./
-RUN npm ci
+RUN npm install
 
 # Build the application
 FROM node:18-alpine AS builder
