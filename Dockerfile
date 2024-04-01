@@ -1,30 +1,24 @@
 # Install dependencies
-FROM node:20.10-bookworm-slim as Dependencies
+FROM node:18-alpine AS dependencies
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm
-RUN pnpm install
-RUN pnpm install sharp
+RUN pnpm install --frozen-lockfile
 
-# Building standalone app
-FROM node:20.10-bookworm-slim as Builder
+# Build the application
+FROM node:18-alpine AS builder
 WORKDIR /app
-COPY --from=Dependencies /app/node_modules ./node_modules
+COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
-ENV NEXT_TELEMETRY_DISABLED 1
-ENV BUILD_STANDALONE true
-RUN npm run build
+RUN pnpm build
 
-# Runner only copies required files to final image to keep the final image size minimum
-FROM node:20.10-bookworm-slim as Runner
+# Production image
+FROM node:18-alpine AS runner
 WORKDIR /app
-ENV NODE_ENV production
-COPY --from=Builder /app/public ./public
-COPY --from=Builder /app/.next/standalone ./
-COPY --from=Builder /app/.next/static ./.next/static
+ENV NODE_ENV=production
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
 
-EXPOSE 3000
-ENV PORT 3000
-ENV HOSTNAME localhost
-
-CMD [ "node", "server.js" ]
+CMD ["pnpm", "start"]

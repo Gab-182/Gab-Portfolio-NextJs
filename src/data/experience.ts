@@ -9,7 +9,8 @@ export const EXPERIENCE: TShowCaseListDetatils[] = [
     },
     date: "May 2021 - Present",
     location: "Abu Dhabi",
-    description: "Collaborated on innovative coding projects involving Python, C/C++, Java, etc.,\
+    description:
+      "Collaborated on innovative coding projects involving Python, C/C++, Java, etc.,\
                   contributing to real-world applications and gaining experience in software design and implementation.",
   },
   {

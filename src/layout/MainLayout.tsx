@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import { ReactNode, useState, useEffect } from "react";
 import { Montserrat } from "next/font/google";
 import { classNames } from "@/utility/classNames";

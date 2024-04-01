@@ -1,6 +1,5 @@
 import { NextSeo } from "next-seo";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
-import FadeUp from "@/animation/FadeUp";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoMdDownload } from "react-icons/io";
 import Link from "next/link";

@@ -70,7 +70,9 @@ export default function ProjectShowcase(props: TProjectShowcase) {
             </motion.div>
           </AnimatePresence>
         </div>
-        <h2 className="text-2xl font-semibold sm:text-4xl">Featured projects</h2>
+        <h2 className="text-2xl font-semibold sm:text-4xl">
+          Featured projects
+        </h2>
         <div className="hidden flex-col gap-6 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:flex">
           {props.projects.map((proj, index) => (
             <ProjectShowcaseList

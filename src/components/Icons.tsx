@@ -80,7 +80,6 @@ export const ArrowTopRight = (props: IconType) => (
   </svg>
 );
 
-
 export function MailIcon({ className }: { className?: string }) {
   return (
     <svg

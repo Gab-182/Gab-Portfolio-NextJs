@@ -139,7 +139,7 @@ export default function Achievements() {
                       <p className="mt-1 text-start text-sm">
                         42 Abu Dhabi Coding School continues to cement its
                         position as a leading talent incubator for developing
-                        and upskilling the Emirate's youth in the coding
+                        and upskilling the Emirate&apos;s youth in the coding
                         field...
                       </p>
                     </li>
@@ -161,9 +161,9 @@ export default function Achievements() {
                         </span>
                       </Link>
                       <p className="mt-1 text-start text-sm">
-                        42 Abu Dhabi's students developed a project featuring an
-                        AI machine-learning model that predicts the occurrence
-                        of chronic kidney diseases...
+                        42 Abu Dhabi&apos;s students developed a project
+                        featuring an AI machine-learning model that predicts the
+                        occurrence of chronic kidney diseases...
                       </p>
                     </li>
                   </ul>
@@ -188,8 +188,8 @@ export default function Achievements() {
                     Throughout my journey exploring{" "}
                     <span className="font-semibold text-teal-600">AI</span>,{" "}
                     <span className="italic">machine learning</span>, and{" "}
-                    <span className="italic">data science</span>, I've been on a
-                    quest for knowledge and skill-building. One memorable
+                    <span className="italic">data science</span>, I&apos;ve been
+                    on a quest for knowledge and skill-building. One memorable
                     experience was my involvement in the{" "}
                     <span className="font-semibold text-teal-600">
                       healathon
@@ -213,7 +213,7 @@ export default function Achievements() {
                     <span className="font-semibold text-teal-600">
                       national newspapers
                     </span>
-                    . Beyond this, I've enjoyed participating in coding
+                    . Beyond this, I&apos;ve enjoyed participating in coding
                     challenges, including those hosted by{" "}
                     <span className="font-semibold text-teal-600">
                       42 Abu Dhabi
@@ -230,20 +230,20 @@ export default function Achievements() {
                     learning opportunities.
                   </p>
                   <p className="mt-4">
-                    I'm particularly proud of our team's achievement in
-                    developing '
+                    I&apos;m particularly proud of our team&apos;s achievement
+                    in developing &apos;
                     <span className="font-semibold text-teal-600">
-                      Sawt AlRu'ya
+                      Sawt AlRu&apos;ya
                     </span>
-                    ,' an app that leverages the{" "}
+                    ,&apos; an app that leverages the{" "}
                     <span className="italic">computer vision technology</span>{" "}
                     to empower visually impaired individuals. This app converts
                     live video into real-time text descriptions and spoken
                     words, enhancing daily experiences.
                   </p>
                   <p className="mt-4">
-                    As I continue on my journey, I'm committed to learning and
-                    contributing to the exciting field of{" "}
+                    As I continue on my journey, I&apos;m committed to learning
+                    and contributing to the exciting field of{" "}
                     <span className="font-semibold text-teal-600">AI</span> and{" "}
                     <span className="italic">data science</span>.
                   </p>
@@ -290,7 +290,7 @@ export default function Achievements() {
                 <AnimatePresence>
                   <div className="rounded-xl border-2 border-gray-200 bg-white p-6 shadow-md backdrop-blur-sm dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100 dark:shadow-lg dark:backdrop-blur-lg">
                     <h2 className="text-center text-xl font-semibold text-teal-600 dark:text-teal-400">
-                      Meet the Visionaries Behind 'Sawt AlRu'ya
+                      Meet the Visionaries Behind &apos;Sawt AlRu&apos;ya
                     </h2>
                     <Link
                       href="https://www.biznesstransform.com/42-abu-dhabi-al-hathboor-bikal-ai-host-hackathon-on-computer-vision-using-python-frameworks/"
@@ -307,11 +307,12 @@ export default function Achievements() {
                       />
                     </Link>
                     <p className="mt-2 text-start">
-                      The winning team developed 'Sawt AlRu'ya,' an app
-                      utilizing advanced computer vision and AI. It transforms
-                      live video into real-time text descriptions and translates
-                      them into spoken words, empowering visually impaired
-                      individuals and enhancing their daily experiences.
+                      The winning team developed &apos;Sawt AlRu&apos;ya,&apos;
+                      an app utilizing advanced computer vision and AI. It
+                      transforms live video into real-time text descriptions and
+                      translates them into spoken words, empowering visually
+                      impaired individuals and enhancing their daily
+                      experiences.
                     </p>
                     <div className="mt-2 flex justify-center">
                       <Link

@@ -61,10 +61,12 @@ export default function ProjectShowcaseList(props: ProjectList) {
             )}
           ></span>
         </Link>
-        <p className="max-w-xl text-base font-semibold text-zinc-800 dark:text-zinc-100 sm:text-md">
+        <p className="sm:text-md max-w-xl text-base font-semibold text-zinc-800 dark:text-zinc-100">
           {props.data.tags.map((tag, index) => (
             <span key={index}>
-              <span className="text-sm font-semibold italic text-teal-500">#</span>
+              <span className="text-sm font-semibold italic text-teal-500">
+                #
+              </span>
               <span className="text-sm font-light italic">{tag}</span>{" "}
             </span>
           ))}

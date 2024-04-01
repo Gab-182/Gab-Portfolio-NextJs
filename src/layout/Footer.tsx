@@ -19,7 +19,9 @@ export default function Footer() {
         >
           Ghaiath.Abdoush@gmail.com
         </Link> */}
-        <div className="mt-4 md:mt-0"><ContactForm/></div>
+        <div className="mt-4 md:mt-0">
+          <ContactForm />
+        </div>
       </div>
       <div className="mt-4 flex space-x-4 md:mt-0">
         <Link href={siteMetadata.github} target="_blank">

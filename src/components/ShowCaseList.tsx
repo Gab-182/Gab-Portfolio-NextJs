@@ -70,7 +70,7 @@ export function ShowCaseListDetatils(props: TShowCaseListDetatils) {
           {props.organisation.href && (
             <Link
               href={props.organisation.href}
-              className="text-teal-600 dark:text-teal-400 hover:underline hover:text-teal-500 dark:hover:text-teal-500"
+              className="text-teal-600 hover:text-teal-500 hover:underline dark:text-teal-400 dark:hover:text-teal-500"
               target="_blank"
             >
               @{props.organisation.name}
