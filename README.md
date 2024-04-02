@@ -9,7 +9,7 @@
 
 -------------
 
-My Personal portfolio is crafted using [Next.js](https://nextjs.org/)
+Personal portfolio, created using [Next.js](https://nextjs.org/)
 
 
 
