@@ -72,18 +72,18 @@ export default function About() {
             </FadeUp>
             <FadeUp key="description-1" duration={0.6} delay={0.2}>
               <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-                I breathe life into ideas through code. With a diverse skill set
-                spanning software development, data analysis, and machine
-                learning, I approach every project with a keen eye for
-                innovation and a user-centric mindset.
+                I bring ideas to life through code. With a solid foundation in
+                software development, data analysis, and machine learning, I
+                take on every project with a focus on innovation and an
+                understanding of what users need.
               </p>
             </FadeUp>
             <FadeUp key="description-2" duration={0.6} delay={0.4}>
               <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-                Explore my portfolio, where I showcase my expertise in Python,
-                JavaScript, React, Next.js, and cutting-edge technologies,
-                bringing creative solutions to fruition with a commitment to
-                excellence and practical impact.
+                Take a look at my portfolio to see my experience in action, from
+                Python and JavaScript to React, Next.js, and other leading
+                technologies. My aim is to deliver creative, impactful solutions
+                that combine technical excellence with real-world practicality.
               </p>
             </FadeUp>
             <FadeRight

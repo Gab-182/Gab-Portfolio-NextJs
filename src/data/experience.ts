@@ -2,6 +2,19 @@ import { TShowCaseListDetatils } from "@/components/ShowCaseList";
 
 export const EXPERIENCE: TShowCaseListDetatils[] = [
   {
+    title: "Data Science Specialist",
+    organisation: {
+      name: "Department of Education And Knowledge - ADEK",
+      href: "https://www.adek.gov.ae/",
+    },
+    date: "Apr 2024 - Present",
+    location: "Abu Dhabi, UAE",
+    description:
+      "Analyzing complex datasets related to student life in Abu Dhabi and the UAE, providing insights to aid decision-makers in data-driven decisions. \
+      Developing and implementing data models and analytics to improve educational outcomes. Collaborating with educational stakeholders to understand data needs and deliver actionable insights. \
+      Utilizing advanced statistical and machine learning techniques to analyze educational data.",
+  },
+  {
     title: "Software Developer Member",
     organisation: {
       name: "42 Abu Dhabi",
