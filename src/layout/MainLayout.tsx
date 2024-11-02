@@ -66,11 +66,14 @@ type MainLayoutProps = {
 export default function MainLayout(props: MainLayoutProps) {
   return (
     <>
-      <SpeedInsights />
       <Analytics />
+      <SpeedInsights />
       <div className={classNames("min-h-screen", montserrat.className)}>
         <Navbar routes={routes} />
-        <main>{props.children}</main>
+        <main>
+          {props.children}
+          <SpeedInsights />
+        </main>
       </div>
       <ScrollToTopIcon />
       <Footer />
